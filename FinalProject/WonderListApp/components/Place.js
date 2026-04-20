@@ -34,9 +34,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "black",
   },
   backgroundImage: {
-    opacity: 0.1,
+    opacity: .1,
   },
 });

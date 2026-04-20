@@ -20,6 +20,8 @@ import {
   Entypo,
   MaterialIcons,
   MaterialCommunityIcons,
+  FontAwesome5,
+  FontAwesome6
 } from "@expo/vector-icons";
 import { useCallback } from "react";
 import BookmarksContextProvider from "./store/context/bookmarks-context";
@@ -39,7 +41,8 @@ function DrawerNavigator() {
         headerStyle: { backgroundColor: Colors.primary500 },
         headerTintColor: "white",
         headerTitleStyle: {
-          fontFamily: "montItalic",
+          fontFamily: "mont",
+          fontWeight: "bold",
           fontSize: 40,
           color: Colors.accent800,
         },
@@ -56,7 +59,7 @@ function DrawerNavigator() {
         name="Places"
         component={TabsNavigator}
         options={{
-          title: "All Travel Destinations",
+          title: "Travel Destinations",
           drawerLabel: "All Travel Destinations",
           drawerIcon: ({ color, size }) => (
             <Entypo name="list" size={size} color={color} />
@@ -71,7 +74,7 @@ function DrawerNavigator() {
           title: "Favoirte Places",
           drawerLabel: "Favorite Places",
           drawerIcon: ({ color, size }) => (
-            <Entypo name="bookmark" size={size} color={color} />
+            <MaterialIcons name="favorite" size={size} color={color} />
           ),
         }}
       />
@@ -96,13 +99,21 @@ function TabsNavigator() {
 
         //Label Styling
         tabBarLabelStyle: {
-          fontSize: 12,
-          fontFamily: "montItalic",
+          fontSize: 14,
+          fontFamily: "mont",
+          fontWeight: "bold"
         },
 
         //Tab bar container styling
         tabBarStyle: {
           backgroundColor: Colors.primary500,
+          height: 80,
+          paddingBottom: 10,
+          paddingTop: 10,
+        },
+
+        tabBarIconStyle: {
+          marginTop: 5,
         },
       }}
     >
@@ -113,7 +124,7 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="newspaper" size={size} color={color} />
+            <FontAwesome5 name="globe-europe" size={size} color={color} />
           ),
           tabBarLabel: "Europe",
         }}
@@ -125,7 +136,7 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <Fontisto name="world-o" size={size} color={color} />
+            <FontAwesome5 name="globe-americas" size={size} color={color} />
           ),
           tabBarLabel: "Americas",
         }}
@@ -137,8 +148,8 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="cable-data"
+            <FontAwesome6
+              name="earth-asia"
               size={size}
               color={color}
             />
@@ -153,8 +164,8 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="cable-data"
+            <FontAwesome6
+              name="earth-oceania"
               size={size}
               color={color}
             />
@@ -208,7 +219,7 @@ export default function App() {
                   headerShown: false,
                 }}
               />
-              {/* News detail screen (opens when user taps article) */}
+              {/* Place detail screen (opens when user taps article) */}
               <Stack.Screen
                 name="PlaceDetail"
                 component={DetailsScreen}

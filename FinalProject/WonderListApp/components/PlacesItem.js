@@ -5,7 +5,7 @@ function PlacesItem(props) {
   const navigation = useNavigation();
 
   function selectedPlaceHandler() {
-    navigation.navigate("PlacesDetails", {
+    navigation.navigate("PlaceDetail", {
       placeId: props.id,
     });
   }
@@ -25,7 +25,7 @@ function PlacesItem(props) {
         {/* Info */}
         <View style={styles.infoContainer}>
           <Text style={styles.name}>{props.name}, {props.country}</Text>
-          <Text style={styles.rating}>{props.rating}</Text>
+          <Text style={styles.rating}>{props.rating}/5</Text>
         </View>
       </Pressable>
     </View>
@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 35,
-    fontFamily: "playfairBold",
+    fontFamily: "poppinsItalic",
     paddingBottom: 5,
   },
   rating: {
     fontSize: 25,
-    fontFamily: "playfair",
+    fontFamily: "poppinsItalic",
     paddingBottom: 5,
   },
 });

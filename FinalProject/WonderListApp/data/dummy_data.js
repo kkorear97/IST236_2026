@@ -48,7 +48,7 @@ export const PLACES = [
         "Europe",
         4.8,
         "https://www.grayline.com/wp-content/uploads/2025/07/shutterstock_2499811449-scaled.jpg",
-        "Prague is the capital of the Czech Republic, known for its stunning medieval architecture, historic castles, and charming cobblestone streets. Often called the ‘City of a Hundred Spires,’ it features iconic landmarks like Prague Castle, Charles Bridge, and the Old Town Square. Visitors can enjoy its rich history, vibrant culture, and scenic views along the Vltava River.",
+        "Prague is the capital of the Czech Republic, known for its stunning medieval architecture, historic castles, and charming cobblestone streets. Often called the 'City of a Hundred Spires,' it features iconic landmarks like Prague Castle, Charles Bridge, and the Old Town Square. Visitors can enjoy its rich history, vibrant culture, and scenic views along the Vltava River.",
         "https://maps.app.goo.gl/focgThzWmwMbrewN8"
     ),
     new Places(
