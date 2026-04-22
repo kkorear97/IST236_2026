@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   imageContainer: {
-    height: 300,
+    width: "100%",
+    height: 340,
   },
   image: {
     height: "100%",
@@ -60,6 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontFamily: "poppinsItalic",
     paddingBottom: 5,
+    textAlign: "center"
   },
   rating: {
     fontSize: 25,

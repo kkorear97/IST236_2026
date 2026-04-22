@@ -20,7 +20,7 @@ function AmericasScreen() {
     >
       {/* Dark gradient overlay */}
       <LinearGradient
-        colors={["rgba(0,0,0,0.6)", "rgba(0,0,0,0.2)", "rgba(0,0,0,0.7)"]}
+        colors={["rgba(0,0,0,0.7)", "rgba(0,0,0,0.3)", "rgba(0,0,0,0.7)"]}
         style={styles.overlay}
       />
 

@@ -1,7 +1,7 @@
 import "react-native-reanimated";
 import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
@@ -14,6 +14,7 @@ import OceaniaScreen from "./screens/OceaniaScreen";
 import EuropeScreen from "./screens/EuropeScreen";
 import DetailsScreen from "./screens/DetailsScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
+import { useScale } from "./components/useScale";
 import Colors from "./constants/colors";
 import {
   Fontisto,
@@ -21,7 +22,7 @@ import {
   MaterialIcons,
   MaterialCommunityIcons,
   FontAwesome5,
-  FontAwesome6
+  FontAwesome6,
 } from "@expo/vector-icons";
 import { useCallback } from "react";
 import BookmarksContextProvider from "./store/context/bookmarks-context";
@@ -33,25 +34,38 @@ const Tabs = createBottomTabNavigator();
 
 //Drawer Navigator
 function DrawerNavigator() {
+  const { font, icon, space, width } = useScale();
   return (
     <Drawer.Navigator
       initialRouteName="Places"
       //Header Styling
       screenOptions={{
-        headerStyle: { backgroundColor: Colors.primary500 },
+        headerStyle: {
+          backgroundColor: Colors.primary500,
+          height: space(80),
+        },
         headerTintColor: "white",
         headerTitleStyle: {
           fontFamily: "mont",
           fontWeight: "bold",
-          fontSize: 40,
-          color: Colors.accent800,
+          fontSize: font(28),
+          color: Colors.primary300,
         },
         //Screen & drawer style
-        sceneContainerStyle: { backgroundColor: Colors.primary300 },
+        sceneContainerStyle: {
+          backgroundColor: Colors.primary300,
+          width: width * 0.75,
+          paddingTop: space(10),
+        },
         drawerContentStyle: { backgroundColor: Colors.primary500 },
         drawerInactiveTintColor: Colors.primary300,
         drawerActiveTintColor: Colors.accent500,
         drawerActiveBackgroundColor: Colors.primary800,
+        drawerLabelStyle: {
+          fontSize: font(16),
+          fontFamily: "mont",
+          fontWeight: "bold",
+        },
       }}
     >
       {/* Main Screen contains tabs */}
@@ -60,9 +74,9 @@ function DrawerNavigator() {
         component={TabsNavigator}
         options={{
           title: "Travel Destinations",
-          drawerLabel: "All Travel Destinations",
-          drawerIcon: ({ color, size }) => (
-            <Entypo name="list" size={size} color={color} />
+          drawerLabel: "Travel Destinations",
+          drawerIcon: ({ color }) => (
+            <Entypo name="list" size={icon(24)} color={color} />
           ),
         }}
       />
@@ -73,8 +87,8 @@ function DrawerNavigator() {
         options={{
           title: "Favoirte Places",
           drawerLabel: "Favorite Places",
-          drawerIcon: ({ color, size }) => (
-            <MaterialIcons name="favorite" size={size} color={color} />
+          drawerIcon: ({ color }) => (
+            <MaterialIcons name="favorite" size={icon(24)} color={color} />
           ),
         }}
       />
@@ -86,6 +100,7 @@ function DrawerNavigator() {
 //Used inside the  drawer screen
 //Lets users swtich between categories
 function TabsNavigator() {
+  const { font, icon, space } = useScale();
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -99,21 +114,23 @@ function TabsNavigator() {
 
         //Label Styling
         tabBarLabelStyle: {
-          fontSize: 14,
+          fontSize: font(14),
           fontFamily: "mont",
-          fontWeight: "bold"
+          fontWeight: "bold",
         },
 
         //Tab bar container styling
         tabBarStyle: {
           backgroundColor: Colors.primary500,
-          height: 80,
-          paddingBottom: 10,
-          paddingTop: 10,
+          height: space(80),
+          paddingBottom: space(10),
+          paddingTop: space(10),
         },
 
         tabBarIconStyle: {
-          marginTop: 5,
+          marginTop: 0,
+          justifyContent: "center",
+          alignItems: "center",
         },
       }}
     >
@@ -123,8 +140,8 @@ function TabsNavigator() {
         component={EuropeScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="globe-europe" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="globe-europe" size={icon(15)} color={color} />
           ),
           tabBarLabel: "Europe",
         }}
@@ -135,8 +152,8 @@ function TabsNavigator() {
         component={AmericasScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="globe-americas" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="globe-americas" size={icon(15)} color={color} />
           ),
           tabBarLabel: "Americas",
         }}
@@ -147,12 +164,8 @@ function TabsNavigator() {
         component={AsiaScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome6
-              name="earth-asia"
-              size={size}
-              color={color}
-            />
+          tabBarIcon: ({ color }) => (
+            <FontAwesome6 name="earth-asia" size={icon(15)} color={color} />
           ),
           tabBarLabel: "Asia",
         }}
@@ -163,12 +176,8 @@ function TabsNavigator() {
         component={OceaniaScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome6
-              name="earth-oceania"
-              size={size}
-              color={color}
-            />
+          tabBarIcon: ({ color }) => (
+            <FontAwesome6 name="earth-oceania" size={icon(15)} color={color} />
           ),
           tabBarLabel: "Oceania",
         }}

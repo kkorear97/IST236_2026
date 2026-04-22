@@ -81,4 +81,85 @@ export const PLACES = [
         "Matamata is a small town in New Zealand's Waikato region, best known as the filming location of Hobbiton from The Lord of the Rings and The Hobbit films. Surrounded by rolling green farmland, it offers a peaceful rural atmosphere and stunning scenery. Visitors come to explore the famous movie set, enjoy guided tours, and experience the charm of New Zealand's countryside.",
         "https://maps.app.goo.gl/7AcMVdb97neGmzET8"
     ),
+    new Places(
+        9,
+        "Amsterdam",
+        "Netherlands",
+        "Europe",
+        4.2,
+        "https://2cupsoftravel.com/wp-content/uploads/2022/11/20221026_114156-1200x900.jpg",
+        "Amsterdam is a charming European city known for its scenic canals, historic architecture, and vibrant culture. Explore world-class museums like the Rijksmuseum and enjoy a laid-back, bike-friendly atmosphere filled with cafés, markets, and unique neighborhoods",
+        "https://maps.app.goo.gl/yAThHAzv2W819EB89"
+    ),
+    new Places(
+        10,
+        "Ho Chi Minh City",
+        "Vietnam",
+        "Asia",
+        4.0,
+        "https://img.smartertravel.com/production/Articles/Ho%20Chi%20Minh%20City%20Things%20To%20Do%20%20Attractions%20%20Must%20See/Feature/large_Ho_Chi_Minh_City_Things_To_Do_Attractions_Must_See_feature_image_45db89b07e.webp",
+        "Ho Chi Minh City is a bustling city where rich history meets modern energy. Known for its vibrant street markets, delicious food, and cultural landmarks, it offers visitors a lively mix of tradition, nightlife, and unforgettable local experiences.",
+        "https://maps.app.goo.gl/2tVNMtAf5f4BWyNY6"
+    ),
+    new Places(
+        11,
+        "Glacier National Park",
+        "Montana",
+        "Americas",
+        4.5,
+        "https://usparkpass.com/wp-content/uploads/2020/06/Glacier_National_Park-1024x683.jpg",
+        "Glacier National Park is a breathtaking natural destination known for its rugged mountains, crystal-clear lakes, and scenic alpine landscapes. Visitors can explore iconic routes like the Going-to-the-Sun Road, hike through diverse wildlife habitats, and experience some of the most stunning scenery in the United States.",
+        "https://maps.app.goo.gl/rr5Pzs4LWGbmAodN9"
+    ),
+    new Places(
+        12,
+        "Sydney",
+        "Australia",
+        "Oceania",
+        4.2,
+        "https://www.pelago.com/img/destinations/sydney/hero-image-xlarge.jpg",
+        "Sydney is a vibrant coastal city known for its iconic harbour, sunny beaches, and world-famous landmarks. Home to the Sydney Opera House and the Sydney Harbour Bridge, the city blends natural beauty with a modern skyline, offering great food, outdoor activities, and a lively urban culture.",
+        "https://maps.app.goo.gl/6xcSGFek5xPf75236"
+    ),
+    new Places(
+        13,
+        "Dublin",
+        "Ireland",
+        "Europe",
+        4.3,
+        "https://assets.cityexperiences.com/wp-content/uploads/2023/03/Temple-Bar-Dublin.jpg",
+        "Dublin is a lively capital city known for its rich history, literary heritage, and welcoming atmosphere. Visitors can explore historic landmarks like Trinity College Dublin and enjoy traditional pubs, live music, and a vibrant cultural scene.",
+        "https://maps.app.goo.gl/ZrLmAndDrc8qtKMg8"
+    ),
+    new Places(
+        14,
+        "Mexico City",
+        "Mexico",
+        "Americas",
+        4.1,
+        "https://lovehardtraveloften.com/wp-content/uploads/2025/12/caption-2-e1766832505799.jpg",
+        "Mexico City is a dynamic capital known for its rich history, vibrant culture, and world-class cuisine. Visitors can explore historic landmarks like the Zócalo and enjoy a mix of ancient traditions, colonial architecture, and modern city life.",
+        "https://maps.app.goo.gl/VhoRjEmrQRaHCMbW6"
+    ),
+    new Places(
+        15,
+        "Agra",
+        "India",
+        "Asia",
+        4.5,
+        "https://media.cntraveler.com/photos/576af69fc06bba921a97a0bc/16:9/w_1280,c_limit/Taj-Mahal-GettyImages-485899645.jpg",
+        "Agra is a historic city best known as the home of the iconic Taj Mahal. Rich in Mughal heritage, it features stunning architecture, bustling markets, and cultural landmarks that showcase India's royal past.",
+        "https://maps.app.goo.gl/M4AdwLTECoHF51RB6"
+
+    ),
+    new Places(
+        16,
+        "Tahiti",
+        "French Polynesia",
+        "Oceania",
+        4.8,
+        "https://gotripzi.com/_astro/tahiti-pf-mountain.DbKdy2d3.webp",
+        "Tahiti is a tropical paradise known for its crystal-clear lagoons, lush mountains, and black-sand beaches. Visitors can enjoy snorkeling, waterfalls, and vibrant Polynesian culture, making it a perfect destination for relaxation and adventure.",
+        "https://maps.app.goo.gl/hsLRiFxie6m8mSQD8"
+    )
 ];
