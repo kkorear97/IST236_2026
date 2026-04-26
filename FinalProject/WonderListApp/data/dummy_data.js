@@ -127,7 +127,7 @@ export const PLACES = [
         "Ireland",
         "Europe",
         4.3,
-        "https://assets.cityexperiences.com/wp-content/uploads/2023/03/Temple-Bar-Dublin.jpg",
+        "https://travelwithwes.com/nitropack_static/bEhSWoUbJZEOJFzeonKViJIWqONdlCkP/assets/images/optimized/rev-a4e37e5/remotelyprod1.wpenginepowered.com/wp-content/uploads/2023/08/Dublin-Ireland-Sunset-Downtown-1024x768.jpg",
         "Dublin is a lively capital city known for its rich history, literary heritage, and welcoming atmosphere. Visitors can explore historic landmarks like Trinity College Dublin and enjoy traditional pubs, live music, and a vibrant cultural scene.",
         "https://maps.app.goo.gl/ZrLmAndDrc8qtKMg8"
     ),

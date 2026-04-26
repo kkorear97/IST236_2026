@@ -42,7 +42,7 @@ function DrawerNavigator() {
       screenOptions={{
         headerStyle: {
           backgroundColor: Colors.primary500,
-          height: space(80),
+          height: space(95),
         },
         headerTintColor: "white",
         headerTitleStyle: {
